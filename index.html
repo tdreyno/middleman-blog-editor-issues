@@ -30,94 +30,109 @@
           <a href="http://register.tdreyno.com" style="position: absolute; right: 0; top: 20px">Purchase License</a>
           <h2>Middleman Blog Editor</h2>
 
-<!--
-          <p>Ever wanted those flash iPhone on/off toggle switches on your webpage? Love jQuery? Well then I&#39;ve got something special for you. iphone-style-checkboxes implements the iPhone toggles as replacements for standard HTML checkboxes. Simply run the script and your site will be updated with these specialized controls. Best of all, the underlying checkbox is not touched and backend system will never know the difference. The change is purely visual.</p>
+          <p>Middleman Blog Editor is a <a href="http://register.tdreyno.com">paid</a> extension to <a href="http://middlemanapp.com">Middleman</a> which adds WYSIWYG article editing and a blog organization interface.</p>
 
-          <h2>Examples</h2>
+          <p>This extension makes it possible to host a Middleman Blog and give the editor URL to a client so they can add content. Files are modified in-place, so committing those changes to source control or deploying new builds is up to you.</p>
 
-          <div class='table'>
-            <table>
-              <tr>
-                <td style='vertical-align: middle !important;'>
-                  A checkbox defaulting to <strong>checked</strong>
-                </td>
-                <td>
-                  <input checked='checked' class='normal' type='checkbox' />
-                </td>
-              </tr>
-              <tr>
-                <td style='vertical-align: middle !important;'>
-                  A checkbox defaulting to <strong>unchecked</strong>
-                </td>
-                <td>
-                  <input class='normal' type='checkbox' />
-                </td>
-              </tr>
-            </table>
-          </div>
+          <p>The editor looks like this:</p>
 
-          <h2>Download and implement</h2>
+          <p>
+            <a href="list.png" style="display: inline-block;"><img src="list.png" alt="Editor Article List" width="214" style="display: inline-block;"></a>
+            <a href="wysiwyg.png" style="display: inline-block;"><img src="wysiwyg.png" alt="Editor Article" width="350" style="display: inline-block;"></a>
+          </p>
 
-          <p>In keeping with the jQuery philosophy, using the iphone-style-checkboxes library is very simple.
-          <a href="https://github.com/tdreyno/iphone-style-checkboxes/zipball/v1">Download the package</a>,
-          unzip it and place the javascript, images and stylesheet where you please. You&#39;ll need to update the stylesheet to point to the new location of your images if they have changed relative to the stylesheet.</p>
+          <h2><a href="http://register.tdreyno.com">Purchasing a License</a></h2>
 
-          <p>Once the files are available to your site, activating the script is very easy:</p>
+          <p>The current release, v0.2, costs $6 and can be <a href="http://register.tdreyno.com">purchased online</a>. Purchasing will give access to private Rubygems server (http://gems.tdreyno.com), direct gem file download and full source file download.</p>
 
-          <pre><code>&lt;head&gt;
-  &lt;script src=&quot;jquery-1.4.js&quot;&gt;&lt;/script&gt;
-  &lt;script src=&quot;jquery/iphone-style-checkboxes.js&quot;&gt;&lt;/script&gt;
-  &lt;link rel=&quot;stylesheet&quot; href=&quot;path_to/style.css&quot;&gt;
-  &lt;script type=&quot;text/javascript&quot;&gt;
-    $(document).ready(function() {
-      $(&#39;:checkbox&#39;).iphoneStyle();
-    });
-  &lt;/script&gt;
-&lt;/head&gt;
+          <h2>Usage</h2>
+
+          <p>After purchasing, you will recieve a username and password for accessing the private Rubygems repository. Add this private source and gem to your Middleman Gemfile</p>
+
+          <pre><code>source :rubygems
+source "http://username:password@gems.tdreyno.com"
+
+gem "middleman"
+gem "middleman-blog"
+gem "middleman-blog-editor"
 </code></pre>
 
-          <p>The initialization method takes a handful of options.</p>
+          <p>Next, activate the editor in your config.rb</p>
+
+          <pre><code>activate :blog_editor
+</code></pre>
+
+          <p>When you start Middleman, you will now have access to the Blog Editor at: http://localhost:4567/editor</p>
+
+          <p>If you'd like to put the editor somewhere else, to avoid clashing with the rest of your site, you can use the <tt>mount_at</tt> option:</p>
+
+          <pre><code>activate :blog_editor do |editor|
+  editor.mount_at = "/editor"
+end
+</code></pre>
+
+
+          <h2>Issue Tracking</h2>
+
+          <p>Use the public Github issue tracker: <a href="https://github.com/tdreyno/middleman-blog-editor-issues/issues">https://github.com/tdreyno/middleman-blog-editor-issues/issues</a></p>
+
+          <h2>Roadmap (Current Release v0.2)</h2>
+
+          <p>There will be 5 feature releases. Pricing will be a simple multiple of the price ($30), by the current version. Free updates for the entire 1.0.x line, after initial purchase.</p>
+
+          <h3>0.2 ($6)</h3>
 
           <ul>
-            <li><tt>checkedLabel</tt> sets the text of the "on" state. Defaults to: <strong>ON</strong></li>
-            <li><tt>uncheckedLabel</tt> sets the text of the "off" state. Defaults to: <strong>OFF</strong></li>
+            <li>Minimal Admin Styles</li>
+            <li>Minimal Article Creation/Deletion/Editing</li>
+            <li>WYSIWYG .html.erb files</li>
+            <li>Plaintext .html.* files</li>
+            <li>Publish/Unpublished Flag</li>
+            <li>Tag Editing</li>
           </ul>
 
-          <p>For example:</p>
+          <h2>Future Plans</h2>
 
-          <pre><code>$(&#39;:checkbox&#39;).iphoneStyle({
-  checkedLabel: &#39;YES&#39;,
-  uncheckedLabel: &#39;NO&#39;
-});
-</code></pre>
+          <h3>0.4 ($12)</h3>
 
-          <div class='table'>
-            <table>
-              <tr>
-                <td style='vertical-align: middle !important;'>
-                  A checkbox defaulting to <strong>checked</strong>
-                </td>
-                <td>
-                  <input checked='checked' class='yesno' type='checkbox' />
-                </td>
-              </tr>
-              <tr>
-                <td style='vertical-align: middle !important;'>
-                  A checkbox defaulting to <strong>unchecked</strong>
-                </td>
-                <td>
-                  <input class='yesno' type='checkbox' />
-                </td>
-              </tr>
-            </table>
-          </div>
+          <ul>
+            <li>Frontmatter Editing</li>
+            <li>Direct link to editor from in the site preview</li>
+            <li>Markdown Preview</li>
+          </ul>
 
-          <h2>Commercial Licensing</h2>
+          <h3>0.6 ($18)</h3>
 
-          <p>Commercial use requires purchase of one-time license fee per developer seat. Commercial use includes any application that makes you money. This includes portfolio sites and premium templates. <a href="https://spb.io/p/on8lagNie5">Commercial licenses may be purchased online</a>. Contact me directly for volume licenses.</p>
+          <ul>
+            <li>Article Searching (Full Text)</li>
+            <li>Article Sorting (By Tags, Date, etc)</li>
+            <li>List Paging</li>
+          </ul>
 
-          <p>Use in non-commercial, educational and personal applications is free.</p>
--->
+          <h3>0.8 ($24)</h3>
+
+          <ul>
+            <li>Client Accounts &amp; Permission</li>
+            <li>White-label Admin</li>
+          </ul>
+
+          <h3>1.0 ($30)</h3>
+
+          <ul>
+            <li>Final Polish</li>
+            <li>Full Test-coverage (automated on Travis)</li>
+            <li>Code docs</li>
+          </ul>
+
+          <h3>2.0 ???</h3>
+
+          <ul>
+            <li>Admin Localization</li>
+            <li>Wordpress Importer</li>
+            <li>Disqus Integration</li>
+            <li>Edit non-local (Git Push/Pull)</li>
+            <li>Markdown/Textile Editing</li>
+          </ul>
         </article>
     
       <footer>
