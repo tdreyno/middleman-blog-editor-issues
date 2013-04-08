@@ -6,7 +6,7 @@ This extension makes it possible to host a Middleman Blog and give the editor UR
 
 ## [Purchasing a License](http://register.tdreyno.com)
 
-The current release, v0.2, costs $6 and can be [purchased online](http://register.tdreyno.com). Purchasing will give access to private Rubygems server (http://gems.tdreyno.com), direct gem file download and full source file download.
+The current release, v0.4, costs $12 and can be [purchased online](http://register.tdreyno.com). Purchasing will give access to private Rubygems server (http://gems.tdreyno.com), direct gem file download and full source file download.
 
 ## Issue Tracking
 
@@ -18,7 +18,7 @@ The official website of this project is: http://middleman-blog-editor.awardwinni
 
 Documentation will be evolving as the project does on that site.
 
-## Roadmap (Current Release v0.2)
+## Roadmap (Current Release v0.4)
 
 There will be 5 feature releases. Pricing will be a simple multiple of the price ($30), by the current version. Free updates for the entire 1.0.x line, after initial purchase.
 
@@ -31,16 +31,16 @@ There will be 5 feature releases. Pricing will be a simple multiple of the price
 * Publish/Unpublished Flag
 * Tag Editing
 
-## Future Plans
-
 ### 0.4 ($12)
 
-* Frontmatter Editing
 * Direct link to editor from in the site preview
 * Markdown Preview
 
+## Future Plans
+
 ### 0.6 ($18)
 
+* Frontmatter Editing
 * Article Searching (Full Text)
 * Article Sorting (By Tags, Date, etc)
 * List Paging
