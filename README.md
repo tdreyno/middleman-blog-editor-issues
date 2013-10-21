@@ -6,7 +6,7 @@ This extension makes it possible to host a Middleman Blog and give the editor UR
 
 ## [Purchasing a License](http://register.tdreyno.com)
 
-The current release, v0.4, costs $12 and can be [purchased online](http://register.tdreyno.com). Purchasing will give access to private Rubygems server (http://gems.tdreyno.com), direct gem file download and full source file download.
+The current release, v0.4.1, costs $12 and can be [purchased online](http://register.tdreyno.com). Purchasing will give access to private Rubygems server (http://gems.tdreyno.com), direct gem file download and full source file download.
 
 ## Issue Tracking
 
@@ -18,7 +18,7 @@ The official website of this project is: http://middleman-blog-editor.awardwinni
 
 Documentation will be evolving as the project does on that site.
 
-## Roadmap (Current Release v0.4)
+## Roadmap (Current Release v0.4.1)
 
 There will be 5 feature releases. Pricing will be a simple multiple of the price ($30), by the current version. Free updates for the entire 1.0.x line, after initial purchase.
 
